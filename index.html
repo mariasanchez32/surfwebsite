@@ -3,78 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caribbean Surf School | Dominican Republic</title>
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<title>Peninsula Surf School | Samaná, Dominican Republic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.hero a {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #0077ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.hero a:hover {
+    background: white;
+    color: #0077ff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* SERVICES */
+.services-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 250px;
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #0077ff;
+}
+
+.service-card .more {
+    opacity: 0;
+    max-height: 0;
+    transition: 0.4s ease;
+}
+
+.service-card.active {
+    flex: 100%;
+    background: #0077ff;
+    color: white;
+}
+
+.service-card.active h3 {
+    color: white;
+}
+
+.service-card.active .more {
+    opacity: 1;
+    max-height: 300px;
+    margin-top: 15px;
+}
+
+/* TEAM */
+.team {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* FAQ */
+details {
+    margin-bottom: 15px;
+    background: #f5f7fa;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+details[open] {
+    background: #e9f2ff;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 10%;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .about, .team {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <div class="container nav-container">
-    <h1>Caribbean Surf School</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#lessons">Lessons</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
 <!-- HERO -->
-<section id="home" class="hero">
-  <div class="overlay">
-    <h2>Professional Surf Training in the Dominican Republic</h2>
-    <p>Certified instructors. Structured programs. Caribbean excellence.</p>
-    <a href="#lessons" class="btn">View Programs</a>
-  </div>
-</section>
+<div class="hero">
+    <video autoplay muted loop>
+        <source src="your-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Peninsula Surf School</h1>
+        <p>Surf Lessons in Samaná, Dominican Republic</p>
+        <a href="#services">View Lessons</a>
+    </div>
+</div>
 
 <!-- ABOUT -->
-<section id="about" class="section beige">
-  <div class="container grid">
-    <div>
-      <h2>About Our School</h2>
-      <p>We provide structured, professional surf instruction on the north coast of the Dominican Republic. Safety, technique, and ocean knowledge are at the core of our philosophy.</p>
-      <p>Our instructors are certified and trained in ocean safety and performance coaching.</p>
+<section>
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+        <img src="about.jpg" alt="Surfing in Samana">
+        <div class="about-text">
+            <p>
+                Located on the beautiful peninsula of Samaná, we offer professional,
+                safe and unforgettable surf experiences. Whether it’s your first
+                wave or you're looking to refine your skills, our experienced
+                instructors are here to guide you in warm Caribbean waters.
+            </p>
+        </div>
     </div>
-    <img src="images/about.jpg" alt="Surf instruction">
-  </div>
 </section>
 
-<!-- LESSONS -->
-<section id="lessons" class="section navy">
-  <div class="container grid reverse">
-    <img src="images/lessons.jpg" alt="Surf lesson">
-    <div>
-      <h2>Our Programs</h2>
-      <ul>
-        <li><strong>Beginner Program:</strong> Foundations and ocean safety</li>
-        <li><strong>Intermediate Coaching:</strong> Wave positioning & technique</li>
-        <li><strong>Private Sessions:</strong> One-on-one performance training</li>
-      </ul>
+<!-- SERVICES -->
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-container">
+        <div class="service-card" onclick="toggleCard(this)">
+            <h3>Beginner Lessons</h3>
+            <p>Perfect for first timers.</p>
+            <div class="more">
+                <p>Learn ocean safety, paddling, popping up, and ride your first wave with confidence. All equipment included.</p>
+            </div>
+        </div>
+
+        <div class="service-card" onclick="toggleCard(this)">
+            <h3>Intermediate Coaching</h3>
+            <p>Improve your technique.</p>
+            <div class="more">
+                <p>Wave selection, turning techniques, positioning and timing. Designed to take your surfing to the next level.</p>
+            </div>
+        </div>
+
+        <div class="service-card" onclick="toggleCard(this)">
+            <h3>Private Surf Tours</h3>
+            <p>Explore hidden breaks.</p>
+            <div class="more">
+                <p>Discover the best surf spots around the Samaná peninsula with local guides who know the waves best.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section beige">
-  <div class="container grid">
-    <div>
-      <h2>Contact Us</h2>
-      <p>Email: info@caribbeansurfschool.com</p>
-      <p>Phone: +1 (809) 000-0000</p>
-      <p>North Coast, Dominican Republic</p>
+<!-- TEAM -->
+<section>
+    <h2 class="section-title">Meet The Team</h2>
+    <div class="team">
+        <img src="team.jpg" alt="Surf Instructor">
+        <div>
+            <p>
+                Founded by passionate local surfers, Peninsula Surf School is built
+                on experience, safety and love for the ocean. Our certified instructors
+                ensure a fun, supportive and professional environment for all ages.
+            </p>
+        </div>
     </div>
-    <img src="images/contact.jpg" alt="Beach in Dominican Republic">
-  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <h2 class="section-title">FAQ</h2>
+
+    <details>
+        <summary>Do I need previous experience?</summary>
+        <p>No experience needed. Our beginner lessons are perfect for first timers.</p>
+    </details>
+
+    <details>
+        <summary>What should I bring?</summary>
+        <p>Swimwear, towel, sunscreen and good energy. We provide boards and rash guards.</p>
+    </details>
+
+    <details>
+        <summary>Are lessons safe?</summary>
+        <p>Yes. Safety is our priority. All lessons begin with beach instruction and ocean awareness training.</p>
+    </details>
+
 </section>
 
 <footer>
-  <p>© 2026 Caribbean Surf School | Dominican Republic</p>
+    <p>© 2026 Peninsula Surf School | Samaná, Dominican Republic</p>
 </footer>
+
+<script>
+function toggleCard(card) {
+    document.querySelectorAll('.service-card').forEach(c => {
+        if (c !== card) c.classList.remove('active');
+    });
+    card.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
