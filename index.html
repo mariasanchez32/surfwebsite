@@ -5,43 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caribbean Surf School | Dominican Republic</title>
 <link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-  <div class="container">
+  <div class="container nav-container">
     <h1>Caribbean Surf School</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="lessons.html">Lessons</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="overlay">
     <h2>Professional Surf Training in the Dominican Republic</h2>
-    <p>Certified instructors. Safe learning environment. World-class Caribbean waves.</p>
-    <a href="lessons.html" class="btn">View Our Programs</a>
+    <p>Certified instructors. Structured programs. Caribbean excellence.</p>
+    <a href="#lessons" class="btn">View Programs</a>
   </div>
 </section>
 
-<section class="features container">
-  <div class="feature">
-    <h3>Certified Instructors</h3>
-    <p>Experienced and internationally trained surf coaches.</p>
+<!-- ABOUT -->
+<section id="about" class="section beige">
+  <div class="container grid">
+    <div>
+      <h2>About Our School</h2>
+      <p>We provide structured, professional surf instruction on the north coast of the Dominican Republic. Safety, technique, and ocean knowledge are at the core of our philosophy.</p>
+      <p>Our instructors are certified and trained in ocean safety and performance coaching.</p>
+    </div>
+    <img src="images/about.jpg" alt="Surf instruction">
   </div>
-  <div class="feature">
-    <h3>All Skill Levels</h3>
-    <p>From complete beginners to advanced wave riders.</p>
+</section>
+
+<!-- LESSONS -->
+<section id="lessons" class="section navy">
+  <div class="container grid reverse">
+    <img src="images/lessons.jpg" alt="Surf lesson">
+    <div>
+      <h2>Our Programs</h2>
+      <ul>
+        <li><strong>Beginner Program:</strong> Foundations and ocean safety</li>
+        <li><strong>Intermediate Coaching:</strong> Wave positioning & technique</li>
+        <li><strong>Private Sessions:</strong> One-on-one performance training</li>
+      </ul>
+    </div>
   </div>
-  <div class="feature">
-    <h3>Prime Locations</h3>
-    <p>Operating in the best surf spots across the north coast.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section beige">
+  <div class="container grid">
+    <div>
+      <h2>Contact Us</h2>
+      <p>Email: info@caribbeansurfschool.com</p>
+      <p>Phone: +1 (809) 000-0000</p>
+      <p>North Coast, Dominican Republic</p>
+    </div>
+    <img src="images/contact.jpg" alt="Beach in Dominican Republic">
   </div>
 </section>
 
